@@ -119,7 +119,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
 	float pixSize = .35;
 	vec4 sideCoord = cube_map_to_side(p);
 	if (length(mod(sideCoord.xy * grid, 1) - .5) < pixSize) {
-		mainCube(fragColor, round(p * grid - .5) / grid);
+		mainCube(fragColor, p);
 	} else {
 		fragColor = vec4(0);
 	}
